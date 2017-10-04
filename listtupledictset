@@ -1,0 +1,106 @@
+D:\public\pythonstudy>python
+Python 2.7.10 (default, May 23 2015, 09:44:00) [MSC v.1500 64 bit (AMD64)] on wi
+n32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> game = ["dota", "dota2", "lol"]
+>>> game
+['dota', 'dota2', 'lol']
+>>> len(game)
+3
+>>> game[0]
+'dota'
+>>> game[1]
+'dota2'
+>>> game[2]
+'lol'
+>>> game[3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> game[0] = "dota3"
+>>> game
+['dota3', 'dota2', 'lol']
+>>> game.append("wow")
+>>> game[3]
+'wow'
+>>> game
+['dota3', 'dota2', 'lol', 'wow']
+>>> game.insert(2, "war3")
+>>> game
+['dota3', 'dota2', 'war3', 'lol', 'wow']
+>>> game.pop()
+'wow'
+>>> game
+['dota3', 'dota2', 'war3', 'lol']
+>>> game.pop(1)
+'dota2'
+>>> game
+['dota3', 'war3', 'lol']
+>>> game = ('dota', 'war3', 'lol')
+>>> game
+('dota', 'war3', 'lol')
+>>> len(game)
+3
+>>> game[0]
+'dota'
+>>> game[1]
+'war3'
+>>> game[2]
+'lol'
+>>> game[3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: tuple index out of range
+>>> name = {1: "alan", 2: "bob", 3: "lucy"}
+>>> name
+{1: 'alan', 2: 'bob', 3: 'lucy'}
+>>> name[1]
+'alan'
+>>> name[2]
+'bob'
+>>> name[3]
+'lucy'
+>>> name[4]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 4
+>>> name[5]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 5
+>>> 4 in name
+False
+>>> 3 in name
+True
+>>> name.get(5)
+>>> print name.get(5)
+None
+>>> name.get(5,"default")
+'default'
+>>> name[4]="mac"
+>>> name
+{1: 'alan', 2: 'bob', 3: 'lucy', 4: 'mac'}
+>>> name.pop(1)
+'alan'
+>>> name
+{2: 'bob', 3: 'lucy', 4: 'mac'}
+>>> len(name)
+3
+>>> name.keys()
+[2, 3, 4]
+>>> name.values()
+['bob', 'lucy', 'mac']
+>>> name.items()
+[(2, 'bob'), (3, 'lucy'), (4, 'mac')]
+>>> girls_1 = set(['lucy', 'lily'])
+>>> girls_2 = set(['lily', 'anna'])
+>>> girls_1 & girls_2
+set(['lily'])
+>>> girls_1 | girls_2
+set(['lily', 'lucy', 'anna'])
+>>> girls_1.add('marry')
+>>> girls_1
+set(['marry', 'lily', 'lucy'])
+>>> girls_1.remove('lucy')
+>>> girls_1
+set(['marry', 'lily'])
