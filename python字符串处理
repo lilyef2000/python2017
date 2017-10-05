@@ -1,0 +1,49 @@
+D:\public\pythonstudy>python
+Python 2.7.10 (default, May 23 2015, 09:44:00) [MSC v.1500 64 bit (AMD64)] on wi
+n32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> s = "abc"
+>>> s.find("b")
+1
+>>> s.find("bc")
+1
+>>> s.find("xx")
+-1
+
+>>> s = "aa12bb12cc"
+>>> s.split('12')
+['aa', 'bb', 'cc']
+>>> s = "abc"
+>>> s.upper()
+'ABC'
+>>> s = "ABC"
+>>> s.lower()
+'abc'
+
+>>> s = "1234567"
+>>> s[2:5]
+'345'
+>>> s[:5]
+'12345'
+>>> s[3:]
+'4567'
+>>> s[3:-1]
+'456'
+
+>>> s = "123"
+>>> t = "456"
+>>> s + t
+'123456'
+
+>>> s = "1,2,3"
+>>> s.replace(",","#")
+'1#2#3'
+
+>>> s = ['a','b','c']
+>>> ",".join(s)
+'a,b,c'
+
+>>> s = "abc"
+>>> s[::-1]
+'cba'
+>>>
