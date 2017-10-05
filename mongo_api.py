@@ -37,19 +37,14 @@ class MongoAPI(object):
         ret = self.get(query)
         return len(ret) > 0
 
-# 如果没有 会新建
-def update(self, query, kv_dict):
-       ret = self.table.update_many(
-           query,
-{
-"$set": kv_dict,
-}
-)
-if not ret.matched_count or ret.matched_count == 0:
-    self.add(kv_dict)
-elif ret.matched_count and ret.matched_count > 1:
-    self.delete(query)
-    self.add(kv_dict)
+    # 如果没有 会新建
+    def update(self, query, kv_dict):
+        ret = self.table.update_many(query,{"$set": kv_dict,})
+        if not ret.matched_count or ret.matched_count == 0:
+            self.add(kv_dict)
+        elif ret.matched_count and ret.matched_count > 1:
+            self.delete(query)
+            self.add(kv_dict)
 
 class DBAPITest(unittest.TestCase):
     def setUp(self):
